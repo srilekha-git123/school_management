@@ -1,0 +1,50 @@
+<h3 mat-dialog-title class="title-color" style="margin-bottom: 0px;padding-bottom: 0px;">{{data.mode == 'edit' ? 'Edit User Details' : (data.mode == 'view' ? 'View User
+    Details' : 'Add User')}}</h3>
+  
+  <form [formGroup]="addStudentform" (ngSubmit)="formSubmit()">
+    <div mat-dialog-content>
+  
+      <mat-form-field class="margin-right margin-top" appearance="outline">
+        <mat-label>Roll No</mat-label>
+        <input matInput formControlName="rollno">
+         </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="margin-top margin-right">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+       </mat-form-field>
+  
+       <mat-form-field appearance="outline" class="margin-top margin-right">
+        <mat-label>Class</mat-label>
+        <input matInput formControlName="class">
+       </mat-form-field>
+
+       <mat-form-field appearance="outline" class="margin-top margin-right">
+        <mat-label>Gender</mat-label>
+        <input matInput formControlName="gender">
+       </mat-form-field>
+
+       <mat-form-field appearance="outline" class="margin-top margin-right">
+        <mat-label>Mobile</mat-label>
+        <input matInput type="tel" formControlName="mobile">
+       </mat-form-field>
+
+       <mat-form-field appearance="outline" class="margin-top margin-right">
+        <mat-label>emailid</mat-label>
+        <input matInput formControlName="emailid">
+       </mat-form-field>
+
+       <mat-form-field appearance="outline" class="margin-top">
+        <mat-label>Address</mat-label>
+        <textarea matInput formControlName="address"></textarea>
+       </mat-form-field>
+  
+     
+    </div>
+  
+    <div mat-dialog-actions align="end">
+      <button *ngIf="data.mode !== 'view'" type="submit" mat-raised-button cdkFocusInitial 
+        class="save-button margin-right" color="primary">Save</button>
+      <button mat-raised-button mat-dialog-close>Cancel</button>
+    </div>
+  </form>

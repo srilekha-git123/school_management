@@ -1,0 +1,56 @@
+<h3 mat-dialog-title class="title-color" style="margin-bottom: 0px;padding-bottom: 0px;">{{data.mode == 'edit' ? 'Edit User Details' : (data.mode == 'view' ? 'View User
+    Details' : 'Add Exam Result Details')}}</h3>
+  
+  <form [formGroup]="addExamResultform" (ngSubmit)="formSubmit()">
+    <div mat-dialog-content>
+  
+      <mat-form-field class="margin-right margin-top" appearance="outline">
+        <mat-label>Roll no</mat-label>
+        <input matInput formControlName="rollNo">
+         </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="margin-top margin-right">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+       </mat-form-field>
+  
+     
+       <mat-form-field appearance="outline" class="margin-top margin-right">
+        <mat-label>Class</mat-label>
+        <input matInput formControlName="className">
+       </mat-form-field>
+
+       <mat-form-field appearance="outline" class="margin-top margin-right">
+        <mat-label>Tamil</mat-label>
+        <input matInput type="number" formControlName="tamil">
+       </mat-form-field>
+
+       <mat-form-field appearance="outline" class="margin-top margin-right">
+        <mat-label>English</mat-label>
+        <input matInput type="number" formControlName="english">
+       </mat-form-field>
+
+       <mat-form-field appearance="outline" class="margin-top margin-right">
+        <mat-label>Maths</mat-label>
+        <input matInput type="number" formControlName="maths">
+       </mat-form-field>
+
+       <mat-form-field appearance="outline" class="margin-top margin-right">
+        <mat-label>Science</mat-label>
+        <input matInput type="number" formControlName="science">
+       </mat-form-field>
+
+       <mat-form-field appearance="outline" class="margin-top margin-right">
+        <mat-label>Social</mat-label>
+        <input matInput type="number" formControlName="social">
+       </mat-form-field>
+
+
+    </div>
+  
+    <div mat-dialog-actions align="end">
+      <button *ngIf="data.mode !== 'view'" type="submit" mat-raised-button cdkFocusInitial 
+        class="save-button margin-right" color="primary">Save</button>
+      <button mat-raised-button mat-dialog-close>Cancel</button>
+    </div>
+  </form>

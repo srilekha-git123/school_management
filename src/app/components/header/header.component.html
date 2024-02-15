@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+    <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+    <mat-menu #menu="matMenu">
+        <button *ngIf="isstudentLoggedIn" mat-menu-item routerLink="/student-details">Student Details</button>
+        <button mat-menu-item routerLink="/exam-details">Exam Details</button>
+    </mat-menu>
+    <span class="title">School Management</span>
+    <span>
+    <button mat-button class="logout" (click)="onLogout()">Logout</button></span>
+</mat-toolbar>

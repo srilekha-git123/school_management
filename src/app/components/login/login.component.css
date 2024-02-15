@@ -1,0 +1,101 @@
+#login-form {
+    .logo {
+        width: 140px;
+        height: 65px;
+        line-height: 64px;
+        font-size: 86px;
+        font-weight: 500;
+        text-align: center;
+        margin: 32px auto;
+        color: #fff;
+        border-radius: 2px;
+        background: #039be5;
+        background: url('/../../assets/images/logo.png') no-repeat;
+        background-size: cover;
+    }
+
+    .title {
+        font-size: 21px;
+    }
+
+    form {
+        width: 100%;
+        padding-top: 32px;
+
+        mat-form-field {
+            width: 100%;
+        }
+
+        button {
+            width: 100%;
+            margin: 16px auto;
+            display: block;
+        }
+    }
+
+    .redirection {
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        max-width: 100%;
+        place-content: center;
+        align-items: center;
+        margin: 2px auto 2px;
+        width: 250px;
+    }
+
+    .loading {
+        margin: 16px auto;
+    }
+
+
+    @media screen and (max-width: 599px) {
+        form {
+            mat-form-field {
+                width: 80%;
+            }
+
+            button {
+                width: 80%;
+            }
+        }
+    }
+
+    .forgotUsername {
+        padding-right: 15px;
+    }
+}
+
+:host {
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+.login {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+    flex-flow: column wrap;
+    align-content: center;
+
+    .login-form-wrapper {
+        width: 400px;
+        min-width: 400px;
+        max-width: 400px;
+        background: #fff;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+
+        .login-form {
+            padding-left: 10%;
+            margin-top: 10%;
+        }
+    }
+}
+
+.title {
+    text-align: center;
+    color: darkblue
+}
